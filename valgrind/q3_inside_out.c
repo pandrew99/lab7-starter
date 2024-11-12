@@ -2,7 +2,7 @@
 
 // Function to free the list and its contents
 void buggy_freeListAndContents(List a) {
-    free(a.contents); 
+    free(a.contents); // //ERROR: need to free internal memory first
 
     for (int i = 0; i < a.size; i += 1) {
         free(a.contents[i].contents);
